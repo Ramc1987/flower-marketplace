@@ -10,19 +10,43 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="header__container container">
+          <nav class="header__nav nav">
+            <a class="nav__logo logo" tabindex="0">
+              <img src="img/logo/logo.png" width="98" height="86" alt="Логотип Сайта flower-marketplace">
+            </a>
+            <ul class="nav__list reset-list">
+              <li class="nav__item">
+                <a href="#">Магазины</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">Контакты</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">О нас</a>
+              </li>
+            </ul>
+            <ul class="nav__language-toggle language-toggle reset-list">
+                <li class="language-toggle__item">
+                  <a class="language-toggle__link" autofocus href="#">Ru</a>
+                </li>
+                <li class="language-toggle__item">
+                  <a class="language-toggle__link" href="#">Eng</a>
+                </li>
+              </ul>
+              <a class="nav__tel-company" href="tel:+36787547894" aria-label="Телефон компании">+3 67 8754 7894</a>
+            <div class="nav__user-auth user-auth">
+              <a class="user-auth__user-login" href="#">Войти</a>
+              <a class="user-auth__create-account" href="#">Создать аккаунт</a>
+            </div>
+            <button class="menu-toggle" type="button" aria-label="Открыть/Закрыть меню">
+              <span></span>
+            </button>
+          </nav>
+        </div>
       </header>
       <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section>
       </main>
       <footer>
         <div class="container"></div>
@@ -43,21 +67,6 @@
         </div>
       </div>
     </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

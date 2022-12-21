@@ -1,0 +1,33 @@
+.language-toggle {
+  display: none;
+
+  @include vp-1023 {
+    display: flex;
+    padding: 0 10px;
+    order: 2;
+  }
+}
+
+.language-toggle__item {
+  @include vp-1023 {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.language-toggle__link {
+  @include font(20px, 23px, 500);
+  color: #9b9b99;
+  outline: none;
+
+  display: block;
+
+  // &--current {
+  //   color: $primary-color;
+  // }
+
+  // &--not-active {
+  //   color: #9b9b99;
+  // }
+}

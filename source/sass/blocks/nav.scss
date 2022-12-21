@@ -1,0 +1,57 @@
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  margin-right: auto;
+}
+
+.nav__list {
+  width: 300px;
+  display: flex;
+  margin-right: auto;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav__item a {
+  @include font(18px, 21px, 500);
+  letter-spacing: 0.02em;
+}
+
+.nav__language-toggle {
+  @include vp-1023 {
+    margin-right: 19px;
+  }
+}
+
+.nav__tel-company {
+  @include font(20px, 23px, 600);
+  font-family: "Roboto", "Arial", sans-serif;
+
+  padding: 0 30px;
+  margin-right: 21px;
+
+  @include vp-1023 {
+    margin-right: 20px;
+    order: 1;
+  }
+}
+
+.nav__user-auth {
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    margin: 0;
+    order: 2;
+  }
+}

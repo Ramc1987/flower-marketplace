@@ -1,0 +1,22 @@
+.user-auth__create-account {
+  max-width: 202px;
+  min-width: 80px;
+  outline: 1px solid #000000;
+  border-radius: 12px;
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 14px 31px;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.user-auth__user-login {
+  margin-right: 12px;
+  padding: 0 30px;
+
+  @include vp-1023 {
+    margin-right: 60px;
+  }
+}

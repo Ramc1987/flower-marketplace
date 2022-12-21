@@ -1,0 +1,22 @@
+.header {
+  background-image: url("../img/background/top-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1080px;
+
+  @include retina {
+    background-image: url("../../img/background/top-background@2x.png");
+  }
+
+  @include vp-1023 {
+    background-image: url("../../img/background/top-background-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center 77px;
+    background-size: contain;
+    min-height: 1024px;
+  }
+}
+
+.header__nav {
+  padding-top: 20px;
+}

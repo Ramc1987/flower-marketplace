@@ -14,6 +14,12 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "../sass/blocks/header.scss";
+@import "../sass/blocks/logo.scss";
+@import "../sass/blocks/nav.scss";
+@import "../sass/blocks/language-toggle.scss";
+@import "../sass/blocks/user-auth.scss";
+@import "../sass/blocks/menu-toggle.scss";
 
 // Blocks
 // ---------------------------------

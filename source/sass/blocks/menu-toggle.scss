@@ -1,0 +1,52 @@
+.menu-toggle {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+    position: absolute;
+    top: 42px;
+    right: 3px;
+    width: 24px;
+    height: 14px;
+    transition-duration: 1s;
+    cursor: pointer;
+    border: none;
+    padding: 20px;
+    background: transparent;
+    z-index: 20;
+  }
+}
+
+.menu-toggle span {
+  @include vp-1023 {
+    height: 2px;
+    width: 18px;
+    background: $primary-color;
+    position: absolute;
+    left: 11px;
+    transition-duration: 0.25s;
+    transition-delay: 0.25s;
+
+    &::before {
+      content: "";
+      left: 0;
+      position: absolute;
+      top: -8px;
+      height: 2px;
+      width: 24px;
+      background: $primary-color;
+      transition: transform 0.25s, top 0.25s 0.25s;
+    }
+
+    &::after {
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 8px;
+      height: 2px;
+      width: 11px;
+      background: $primary-color;
+      transition: transform 0.25s, top 0.25s 0.25s;
+    }
+  }
+}
