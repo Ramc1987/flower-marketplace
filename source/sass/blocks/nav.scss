@@ -86,6 +86,10 @@
     padding: 0 8px;
     margin-right: 10px;
   }
+
+  @include vp-344 {
+    display: none;
+  }
 }
 
 .nav__user-auth {

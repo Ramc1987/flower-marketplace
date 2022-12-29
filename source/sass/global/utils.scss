@@ -17,6 +17,19 @@
   }
 }
 
+.button {
+  @include font(16px, 19px, 600);
+
+  display: block;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  @include hover {
+    opacity: 0.8;
+  }
+}
+
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */

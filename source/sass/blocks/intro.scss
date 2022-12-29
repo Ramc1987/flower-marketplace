@@ -1,14 +1,20 @@
 .intro__content {
   margin: 0 auto;
   padding-top: 187px;
+  padding-bottom: 190px;
 
   @include vp-1023 {
     transition: 0.5s ease-out;
     padding-top: 81px;
+    padding-bottom: 81px;
+  }
+
+  @include vp-767 {
+    padding-top: 103px;
   }
 }
 
-.intro__content h1 {
+.intro__content-title {
   width: 62.5%;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -23,6 +29,16 @@
 
   @include vp-767 {
     @include font(24px, 29px, 400);
+    display: none;
+  }
+
+  &--title-mobile {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -40,13 +56,16 @@
 
   @include vp-767 {
     @include font(16px, 19px, 300);
+    margin-bottom: 23px;
+    letter-spacing: 0.1px;
   }
 }
 
 .intro__control-buttons {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   width: 476px;
   margin: 0 auto;
 
@@ -54,10 +73,8 @@
     width: 100%;
   }
 
-  @include vp-375 {
-    @media (min-width: $vp-348) {
-      justify-content: center;
-    }
+  @include vp-344 {
+    justify-content: center;
   }
 }
 
@@ -79,6 +96,10 @@
       padding: 12px 13px;
     }
 
+    @include vp-344 {
+      max-width: 100%;
+    }
+
     @include hover {
       background-color: #ffe282af;
     }
@@ -94,6 +115,10 @@
       padding: 12px 7.5px;
     }
 
+    @include vp-344 {
+      max-width: 100%;
+    }
+
     @include hover {
       background-color: #edededab;
     }
@@ -101,15 +126,15 @@
 
   @include vp-767 {
     @include font(16px, 19px, 600);
+    letter-spacing: 0.01em;
+  }
+
+  @include vp-344 {
+    margin-bottom: 10px;
+    width: 100%;
   }
 
   @include focus {
     outline: 1px solid #f3ba3f;
-  }
-
-  @include vp-375 {
-    @media (min-width: $vp-344) {
-      width: 100%;
-    }
   }
 }

@@ -74,6 +74,12 @@
   }
 }
 
+@mixin vp-344 {
+  @media (max-width: ($vp-345 - 1px)) {
+    @content;
+  }
+}
+
 @mixin font($fs: 16px, $lh: 19.5px, $fw: 500) {
   font-size: $fs;
   line-height: $lh;
