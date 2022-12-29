@@ -3,10 +3,8 @@
 
   @include vp-1023 {
     display: block;
-    position: absolute;
-    top: 42px;
-    right: 3px;
-    width: 24px;
+    position: relative;
+    width: 40px;
     height: 14px;
     transition-duration: 1s;
     cursor: pointer;
@@ -14,6 +12,11 @@
     padding: 20px;
     background: transparent;
     z-index: 20;
+    order: 4;
+  }
+
+  @include vp-767 {
+    padding: 15px;
   }
 }
 
@@ -36,6 +39,11 @@
       width: 24px;
       background: $primary-color;
       transition: transform 0.25s, top 0.25s 0.25s;
+
+      @include vp-767 {
+        top: -7px;
+        width: 20px;
+      }
     }
 
     &::after {
@@ -47,6 +55,44 @@
       width: 11px;
       background: $primary-color;
       transition: transform 0.25s, top 0.25s 0.25s;
+
+      @include vp-767 {
+        top: 7px;
+        width: 10px;
+      }
+    }
+  }
+
+  @include vp-1023 {
+    left: 8px;
+  }
+
+  @include vp-767 {
+    top: 14px;
+    left: 5px;
+    width: 14px;
+  }
+}
+
+.nav--open .menu-toggle span {
+  @include vp-767 {
+    width: 0;
+    transition: 0.1s ease-in-out;
+
+    &::after {
+      content: "";
+      top: 0;
+      width: 25px;
+      transform: rotate(-45deg);
+      transition: 0.4s ease-in-out;
+    }
+
+    &::before {
+      content: "";
+      top: 0;
+      width: 25px;
+      transform: rotate(45deg);
+      transition: 0.4s ease-in-out;
     }
   }
 }

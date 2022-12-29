@@ -6,6 +6,10 @@
     padding: 0 10px;
     order: 2;
   }
+
+  @include vp-767 {
+    padding: 0 8px;
+  }
 }
 
 .language-toggle__item {
@@ -30,4 +34,8 @@
   // &--not-active {
   //   color: #9b9b99;
   // }
+
+  @include vp-767 {
+    @include font(16px, 19px, 500);
+  }
 }

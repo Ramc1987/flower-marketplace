@@ -17,6 +17,10 @@
   padding: 0 30px;
 
   @include vp-1023 {
-    margin-right: 60px;
+    margin-right: 21px;
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }

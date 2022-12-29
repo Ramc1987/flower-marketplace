@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {definesLang} from './modules/modals/language-toggle';
+import {definesLang} from './modules/language-toggle';
+import {openMobMenu} from './modules/mobile-menu';
 
 // ---------------------------------
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     definesLang();
+    openMobMenu();
   });
 });
 
