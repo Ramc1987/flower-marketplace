@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {definesLang} from './modules/language-toggle';
 import {openMobMenu} from './modules/mobile-menu';
-import {generateCapcheCode} from './modules/validate-form';
+import {generateCapcheCode, returnFormPrev, opensNextStep, validationForm} from './modules/validate-form';
 
 // ---------------------------------
 
@@ -13,6 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   generateCapcheCode();
+  returnFormPrev();
+  opensNextStep();
+  validationForm();
 
   // Modules
   // ---------------------------------

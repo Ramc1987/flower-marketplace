@@ -65,48 +65,98 @@
                 <h2>Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
                 <p>Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы полностью и корректно! После подтверждения регистрации вы попадёте в систему, где большинство процессов автоматизированы, что сэкономит ваше время и деньги!</p>
               </div>
-              <form class="form" action="#" method="get" autocomplete="off">
+              <form class="form" action="#" id="form" method="get" autocomplete="off" enctype="multipart/form-data">
                 <fieldset class="form__first-fieldset">
                   <legend class="visually-hidden">First-form</legend>
                   <div class="form__input">
                     <label class="form__input-lable" for="name">Ваше Имя</label>
-                    <input class="form__input-field" type="text" name="name" id="name" placeholder="Фролова Александра Васильевна" required>
+                    <input class="form__input-field"
+                    type="text"
+                    name="user-name"
+                    value=""
+                    id="user-name"
+                    placeholder="Фролова Александра Васильевна"
+                    title="Фамилия Имя Отчество"
+                    autocomplete="off">
                   </div>
                   <div class="form__input">
                     <label class="form__input-lable" for="company">Название Компании</label>
-                    <input class="form__input-field" type="text" id="company" name="company" placeholder="ООО Атлантика" required>
+                    <input class="form__input-field"
+                    type="text"
+                    name="company"
+                    value=""
+                    id="company"
+                    placeholder="ООО Атлантика"
+                    title="Название компании ООО, ОАО, ИП"
+                    autocomplete="off">
                   </div>
                   <div class="form__input">
                     <label class="form__input-lable" for="email">E-mail</label>
-                    <input class="form__input-field" type="email" id="email" name="email" placeholder="flolovaalexa@com.ru" required>
+                    <input class="form__input-field"
+                    type="email"
+                    name="email"
+                    value=""
+                    id="email"
+                    placeholder="flolovaalexa@com.ru">
                   </div>
                   <div class="form__input">
                     <label class="form__input-lable" for="phone">Номер телефона</label>
-                    <input class="form__input-field" type="tel" id="phone" name="phone" placeholder="+7 (XXX) - XXX XX XX" required>
+                    <input class="form__input-field"
+                    type="tel"
+                    name="phone"
+                    value=""
+                    id="phone"
+                    placeholder="+7 (XXX) - XXX XX XX">
                   </div>
                   <div class="form__input">
                     <label class="form__input-lable" for="promocod">Промокод</label>
-                    <input class="form__input-field" type="tel" id="promocod" name="promocod" placeholder="HGF864">
+                    <input class="form__input-field"
+                    type="tel"
+                    name="promocod"
+                    id="promocod"
+                    minlength="6"
+                    maxlength="6"
+                    placeholder="HGF864">
                   </div>
                   <button class="form__button-next button" type="button" aria-label="next-form">Далее</button>
                 </fieldset>
-
-                <fieldset class="form__second-fieldset">
-                  <legend class="visually-hidden">First-form</legend>
+                <fieldset class="form__second-fieldset hidden-form">
+                  <legend class="visually-hidden">Second-form</legend>
                   <div class="form__input">
                     <label class="form__input-lable" for="password">Пароль</label>
-                    <input class="form__input-field" type="password" id="password" name="password" placeholder="Создайте пароль" minlength="8" required>
+                    <input class="form__input-field"
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Создайте пароль"
+                    minlength="8"
+                    autocomplete="off">
                   </div>
                   <div class="form__input">
-                    <label class="form__input-lable" for="accept-password">Подтвердите пароль</label>
-                    <input class="form__input-field" type="password" id="accept-password" name="accept-password" placeholder="Повторите пароль" required>
+                    <label class="form__input-lable" for="repeat-password">Подтвердите пароль</label>
+                    <input class="form__input-field"
+                    type="password"
+                    name="repeat-password"
+                    id="repeat-password"
+                    placeholder="Повторите пароль"
+                    autocomplete="off">
                   </div>
                   <div class="form__input">
-                    <input class="capche-code" type="text" minlength="5" maxlength="5" required>
+                    <input class="capche-code"
+                    type="text"
+                    minlength="5"
+                    maxlength="5"
+                    readonly
+                    required>
                   </div>
                   <div class="form__input">
                     <label class="form__input-lable" for="capche-code">Введите символы из картинки</label>
-                    <input class="form__input-field" type="text" id="capche-code" name="capche-code" minlength="5" maxlength="5" placeholder="Код из картинки">
+                    <input class="form__input-field" type="text"
+                    name="capche-code"
+                    id="capche-code"
+                    minlength="5"
+                    maxlength="5"
+                    placeholder="Код из картинки">
                   </div>
                   <div class="form__control-buttons">
                     <button class="form__button-prev button" type="button" aria-label="Назад">Назад</button>

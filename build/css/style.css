@@ -643,6 +643,11 @@ button,
   cursor: pointer;
 }
 
+.hidden-form {
+  overflow: hidden;
+  height: 0;
+}
+
 .rouble {
   font-family: "Rouble", "Arial", sans-serif;
   /* stylelint-disable */
@@ -940,8 +945,6 @@ button,
   border: none;
   padding: 0;
   margin: 0;
-  height: 0;
-  overflow: hidden;
 }
 
 .form__input {
@@ -949,9 +952,14 @@ button,
 }
 
 .form__input-field {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: "Raleway", "Arial", sans-serif;
   width: 100%;
   display: block;
   border: none;
+  outline: none;
   border-radius: 6px;
   background-color: #fff8e1;
   padding: 16px 0 16px 8px;
@@ -973,6 +981,7 @@ button,
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.4em;
+  outline: none;
   background-color: #a0b3af;
   border: none;
   border-radius: 12px;
@@ -1009,6 +1018,18 @@ button,
 
 .form__button-next {
   padding: 16px 135px;
+}
+
+.is-invalid {
+  outline: 2px solid #f55f7b;
+}
+
+.just-validate-success-field {
+  outline: 2px solid #89be8d;
+}
+
+.just-validate-error-label {
+  margin-top: -20px;
 }
 
 .btn {

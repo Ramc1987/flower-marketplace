@@ -30,6 +30,11 @@
   }
 }
 
+.hidden-form {
+  overflow: hidden;
+  height: 0;
+}
+
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */
